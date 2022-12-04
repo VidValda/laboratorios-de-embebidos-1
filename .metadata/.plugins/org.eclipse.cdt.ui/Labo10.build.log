@@ -1,0 +1,24 @@
+09:55:58 **** Incremental Build of configuration Debug for project Labo10 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L432xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:70:10: warning: unused variable 'i' [-Wunused-variable]
+   70 |  uint8_t i = 0;
+      |          ^
+../Core/Src/main.c:69:11: warning: unused variable 'DAC_OUT' [-Wunused-variable]
+   69 |  uint32_t DAC_OUT[4] = {0,1024,2482,3723};
+      |           ^~~~~~~
+arm-none-eabi-gcc -o "Labo10.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Usuario\STM32CubeIDE\workspace_1.10.1\Labo10\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Labo10.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Labo10.elf
+ 
+arm-none-eabi-size   Labo10.elf 
+arm-none-eabi-objdump -h -S  Labo10.elf  > "Labo10.list"
+   text	   data	    bss	    dec	    hex	filename
+   9208	     24	   1592	  10824	   2a48	Labo10.elf
+Finished building: default.size.stdout
+ 
+Finished building: Labo10.list
+ 
+
+09:55:59 Build Finished. 0 errors, 2 warnings. (took 1s.17ms)
+

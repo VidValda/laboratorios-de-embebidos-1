@@ -1,0 +1,10 @@
+17:49:50 **** Incremental Build of configuration Debug for project LAbo 10 ****
+make -j16 all 
+arm-none-eabi-size   LAbo\ 10.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17760	     20	   2140	  19920	   4dd0	LAbo 10.elf
+Finished building: default.size.stdout
+ 
+
+17:49:50 Build Finished. 0 errors, 0 warnings. (took 328ms)
+
